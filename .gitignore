@@ -1,0 +1,33 @@
+# Your deck, your voice, your video. None of this belongs in a repo.
+slides/
+clips/
+takes/
+build/
+samples/
+*.mp4
+*.wav
+*.m4a
+*.mp3
+.bowerbird_profile
+bowerbird.toml
+script.json
+DRAFT_PROMPT.md
+
+# ...but the example project is checked in deliberately.
+!examples/**/slides/
+!examples/**/script.json
+!examples/**/bowerbird.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# OS
+.DS_Store

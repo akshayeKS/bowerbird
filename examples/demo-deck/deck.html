@@ -1,0 +1,83 @@
+<!doctype html>
+<!--
+  A completely fictional deck, here so `deckspeak` has something to chew on in
+  tests and in the README walkthrough. Tidepool is not a real product and every
+  number below is invented.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tidepool: demo deck</title>
+<style>
+  body { margin:0; background:#0b0b0b; }
+  .slide {
+    position:relative; width:1280px; height:720px;
+    background:#0b0b0b; color:#fff; overflow:hidden;
+    font-family: Inter, -apple-system, Helvetica, Arial, sans-serif;
+    padding:64px 80px; box-sizing:border-box;
+  }
+  .eyebrow { color:#9ae66e; font-size:18px; letter-spacing:.14em;
+             text-transform:uppercase; font-weight:600; margin-bottom:28px; }
+  h1 { font-size:92px; line-height:1; margin:0 0 20px; letter-spacing:-.02em; }
+  h2 { font-size:46px; line-height:1.15; margin:0 0 32px; max-width:980px; }
+  p  { font-size:26px; line-height:1.5; color:#d7d7d7; max-width:900px; margin:0 0 18px; }
+  .big { font-size:88px; font-weight:700; color:#9ae66e; }
+  ul { font-size:26px; line-height:1.6; color:#d7d7d7; padding-left:1.1em; margin:0; }
+  .badge { display:inline-block; font-size:16px; letter-spacing:.1em;
+           text-transform:uppercase; padding:6px 14px; border-radius:999px;
+           background:#3a2d12; color:#f0c674; font-weight:700; margin-bottom:24px; }
+  .foot { position:absolute; left:80px; bottom:40px; color:#777; font-size:18px; }
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <div class="eyebrow">Platform · Demo</div>
+  <h1>Tidepool</h1>
+  <h2>Find the slow query before your users do</h2>
+  <div class="foot">Tidepool · 1 / 5</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">The problem</div>
+  <h2>Slow queries are found by complaint, not by measurement</h2>
+  <p><span class="big">40</span> &nbsp;services with no query budget</p>
+  <ul>
+    <li>Nobody notices until a dashboard times out</li>
+    <li>The slowest query is usually three releases old</li>
+  </ul>
+  <div class="foot">Tidepool · 2 / 5</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">What Tidepool is</div>
+  <h2>A query budget that runs in CI</h2>
+  <ul>
+    <li>Records every query a test makes</li>
+    <li>Compares it against a budget file in the repo</li>
+    <li>Fails the build when a query gets slower</li>
+  </ul>
+  <div class="foot">Tidepool · 3 / 5</div>
+</section>
+
+<section class="slide">
+  <div class="eyebrow">Demo</div>
+  <h2>A budget break, caught in review</h2>
+  <p>One index dropped. The build fails and names the query, the table, and
+     the commit that changed it.</p>
+  <div class="foot">Tidepool · 4 / 5</div>
+</section>
+
+<section class="slide">
+  <span class="badge">Planned</span>
+  <div class="eyebrow">Roadmap</div>
+  <h2>Automatic budgets from production traces</h2>
+  <ul>
+    <li>Draft a budget from last week's real traffic</li>
+    <li>Suggest the index, not just the failure</li>
+  </ul>
+  <div class="foot">Tidepool · 5 / 5</div>
+</section>
+
+</body>
+</html>

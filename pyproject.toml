@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bowerbird"
+version = "0.1.0"
+description = "Turn a slide deck into a narrated video, in your own voice, entirely on your machine."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["slides", "narration", "text-to-speech", "voice-cloning", "video", "local-first"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+# No runtime dependencies on purpose: stdlib only.
+# External tools (ffmpeg, and optionally Chrome/poppler) are checked at runtime
+# by `bowerbird check`, which tells you exactly what to install.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+bowerbird = "bowerbird.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/akshayeKS/bowerbird"
+Issues = "https://github.com/akshayeKS/bowerbird/issues"
+
+[tool.setuptools]
+packages = ["bowerbird"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
