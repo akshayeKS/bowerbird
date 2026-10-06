@@ -19,9 +19,8 @@ deck.pdf / .pptx / .html ──┐
 ```
 
 Nothing is uploaded. Voice cloning runs against a local
-[Voicebox](https://github.com/voiceboxdev/voicebox) install on `localhost`, and the
-only network call bowerbird ever makes is the optional `--llm` flag you have to ask
-for by name.
+[Voicebox](https://voicebox.sh) install on `localhost`, and the only network call
+bowerbird ever makes is the optional `--llm` flag you have to ask for by name.
 
 ---
 
@@ -48,12 +47,6 @@ recalibrates that rate from your actual output so the next estimate is sharper.
 ## Install
 
 ```sh
-pip install bowerbird
-```
-
-Or from source:
-
-```sh
 git clone https://github.com/akshayeKS/bowerbird
 cd bowerbird && pip install -e .
 ```
@@ -64,7 +57,7 @@ some external tools, and `bowerbird check` will tell you exactly which are missi
 | | needed for | install |
 |---|---|---|
 | **ffmpeg** | always | `brew install ffmpeg` |
-| **Voicebox** | voice cloning | see below |
+| **Voicebox** | voice cloning | [voicebox.sh](https://voicebox.sh) — see below |
 | Chrome | HTML decks | probably already there |
 | poppler | PDF decks | `brew install poppler` |
 | LibreOffice | `.pptx`/`.odp` decks | `brew install --cask libreoffice` |
